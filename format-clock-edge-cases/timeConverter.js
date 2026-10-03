@@ -9,13 +9,17 @@ function formatAs12HourClock(time) {
   else if (hours > 12) {
     return `${hours - 12}:${minutes} pm`;
   }
+    else if (hours === 12) {
+    return `12:${minutes} pm`;
+  }
+
  else if (hours > 9){
     return `${hours}:${minutes} am`
   } 
 else if (hours < 1) {
   return `12:${minutes} am`;
 }
-  return `0${hours}:${minutes} am`;
+  return `${hours}:${minutes} am`;
 }
 
 
