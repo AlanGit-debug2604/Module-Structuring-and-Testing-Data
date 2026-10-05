@@ -2,8 +2,10 @@ function formatAs12HourClock(time) {
   const hours = Number(time.slice(0, 2));
   const minutes = time.slice(-2);
 
-  if (hours > 12) {
+  if (hours > 21) {
     return `${hours - 12}:${minutes} pm`;
+  } else if (hours > 12) {
+    return `0${hours - 12}:${minutes} pm`;
   } else if (hours === 12) {
     return `12:${minutes} pm`;
   } else if (hours > 9) {
@@ -11,7 +13,7 @@ function formatAs12HourClock(time) {
   } else if (hours < 1) {
     return `12:${minutes} am`;
   }
-  return `${hours}:${minutes} am`;
+  return `0${hours}:${minutes} am`;
 }
 
 export { formatAs12HourClock };
