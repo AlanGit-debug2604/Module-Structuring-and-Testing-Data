@@ -7,7 +7,7 @@ test("correctly convert time after 12:00", function () {
 });
 
 test("can correctly convert morning time", function () {
-  assert.equal(formatAs12HourClock("08:00"), "8:00 am");
+  assert.equal(formatAs12HourClock("08:00"), "08:00 am");
 });
 
 test("can correctly convert midnight time", function () {
@@ -15,7 +15,7 @@ test("can correctly convert midnight time", function () {
 });
 
 test("can correctly convert single character hour morning time", function () {
-  assert.equal(formatAs12HourClock("09:00"), "9:00 am");
+  assert.equal(formatAs12HourClock("09:00"), "09:00 am");
 });
 
 test("can correctly convert dual characters hour morning time", function () {
