@@ -26,6 +26,18 @@ test("can correctly convert noon time", function () {
   assert.equal(formatAs12HourClock("12:00"), "12:00 pm");
 });
 
+test("can correctly convert to single character afternoon time", function () {
+  assert.equal(formatAs12HourClock("16:59"), "04:59 pm");
+});
+
 test("can correctly shows minutes input", function () {
-  assert.equal(formatAs12HourClock("16:59"), "4:59 pm");
+  assert.equal(formatAs12HourClock("16:59"), "04:59 pm");
+});
+
+test("can correctly keep am in last minute of morning", function () {
+  assert.equal(formatAs12HourClock("11:59"), "11:59 am");
+});
+
+test("can correctly keep pm in last minute of the day", function () {
+  assert.equal(formatAs12HourClock("23:59"), "11:59 pm");
 });
