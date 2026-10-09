@@ -16,3 +16,9 @@
 export function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
 }
+
+//Cases show cases
+//Proper function ; improper function
+//Input type: Num
+//Process : number to logic test
+//Output type: boolean
