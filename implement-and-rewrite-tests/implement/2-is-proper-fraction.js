@@ -15,10 +15,28 @@
 
 export function isProperFraction(numerator, denominator) {
   // TODO: Implement this function
+  if (typeof numerator !== "number" || typeof denominator !== "number") {
+    throw new TypeError("Both arguments must be numbers");
+  }
+  if (!Number.isFinite(numerator) || !Number.isFinite(denominator)) {
+    throw new TypeError("Both arguments must be numbers");
+  }
+
+  if (denominator === 0) {
+    return `Not a valid fraction`;
+  }
+
+  if (Math.abs(numerator) < Math.abs(denominator)) {
+    return true;
+  }
+
+  return false;
 }
 
 //Cases show cases
 //Proper function ; improper function
 //Input type: Num
 //Process : number to logic test
-//Output type: boolean
+//Output type: boolean or error
+//Edge case : negative number
+//Edge case: decimal
