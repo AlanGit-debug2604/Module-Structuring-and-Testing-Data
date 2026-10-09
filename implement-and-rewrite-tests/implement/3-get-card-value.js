@@ -26,3 +26,8 @@
 export function getCardValue(card) {
   // TODO: Implement this function
 }
+
+//Case showcases
+//Input: (Rank) "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" and (Suit), also invalid input
+//Process Turn input into Num : "A" to 11 ; ("J", "Q", "K") to 10
+//Output : a valid Num , or invalid throw error
