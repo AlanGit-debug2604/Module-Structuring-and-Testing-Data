@@ -25,9 +25,38 @@
 
 export function getCardValue(card) {
   // TODO: Implement this function
+if(typeof card !== String){
+  throw new TypeError("Input not a string");
+  }
+const Rank = [card.Slice(0,-1)];
+const Suit = [card.Slice(-1)];
+const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
+const validSuits = [ "♠", "♥", "♦", "♣"];
+
+if (!validRanks.includes(Rank)||!validSuits.includes(Suit)){
+  return `Invalid input`
 }
+
+if (Rank === "A") {
+  return 11
+}
+
+if (["J", "Q", "K" ].includes(Rank)){
+  return 10
+}
+
+return  Number(Rank)
+}
+
 
 //Case showcases
 //Input: (Rank) "A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K" and (Suit), also invalid input
+//Input type: String
 //Process Turn input into Num : "A" to 11 ; ("J", "Q", "K") to 10
 //Output : a valid Num , or invalid throw error
+//const rank
+//const suit 
+//Edge cases 0: not string
+//Edge cases 1: ANy first letter which is not a Rank;
+//Edge cases 2: Not a Rank plus Suit input;
+//Edge cases 3: Suit mistyped ; or second character is not a suit
