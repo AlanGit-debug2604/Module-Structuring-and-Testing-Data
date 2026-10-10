@@ -34,7 +34,7 @@ export function getAngleType(angle) {
   if (angle < 180) {
     return `Obtuse angle`;
   }
-  return ` Reflex angle`;
+  return `Reflex angle`;
 }
 
 //Pseudo codes
