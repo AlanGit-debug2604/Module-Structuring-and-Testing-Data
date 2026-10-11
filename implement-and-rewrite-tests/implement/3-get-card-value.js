@@ -33,9 +33,14 @@ const Suit = [card.Slice(-1)];
 const validRanks = ["A", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"];
 const validSuits = [ "♠", "♥", "♦", "♣"];
 
-if (!validRanks.includes(Rank)||!validSuits.includes(Suit)){
-  return `Invalid input`
+if (!validRanks.includes(Rank)){
+  return `Invalid Rank`
 }
+
+if (!validSuits.includes(Suit)){
+  return `Invalid Suit`
+}
+
 
 if (Rank === "A") {
   return 11
