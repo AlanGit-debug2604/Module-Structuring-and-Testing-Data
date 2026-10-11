@@ -23,7 +23,7 @@ export function isProperFraction(numerator, denominator) {
   }
 
   if (denominator === 0) {
-    return `Not a valid fraction`;
+    throw new TypeError("Denominator cannot be zero");
   }
 
   if (Math.abs(numerator) < Math.abs(denominator)) {
