@@ -85,7 +85,7 @@ test('should return false for improper fraction with both negative numerator and
   expect(isProperFraction(-10, -5)).toEqual(false);
 });
 
-
+// Case15: proper fraction with positive numerator and denominator
 test('should return true for proper fraction', () => {
   expect(isProperFraction(1, 2)).toEqual(true);
   expect(isProperFraction(2, 3)).toEqual(true);
