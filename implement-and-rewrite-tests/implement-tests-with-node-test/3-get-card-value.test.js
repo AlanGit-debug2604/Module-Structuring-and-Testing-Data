@@ -32,6 +32,14 @@ test("Non-string input", () => {
     "Expected clear error"
   );
 });
+
+test("Arbitrary non-card string", () => {
+  assert.throws(
+  () => getCardValue("invalid"), 
+  /Expected a number followed by a suit,/, 
+  "Expected clear error"
+);
+});
 // TODO: What other invalid card cases can you think of?
 //Invalid Rank or
 //Invalid String
