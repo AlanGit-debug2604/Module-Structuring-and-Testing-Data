@@ -28,6 +28,9 @@ export function getCardValue(card) {
   if (typeof card !== "string") {
     throw new TypeError("Input not a string");
   }
+   if (card.length < 2 || card.length > 3) {
+    throw new Error(`Expected a number followed by a suit, but got "${card}"`);
+    }
   const Rank = card.slice(0, -1);
   const Suit = card.slice(-1);
   const validRanks = [
