@@ -36,13 +36,8 @@ test("Classifies Reflex angles", () => {
   assert.equal(right, "Reflex angle");
 });
 
-test("Classifies Reflex angles", () => {
-  const right = getAngleType(360);
-  assert.equal(right, "Reflex angle");
-});
-
 test("Classifies Invalid angles", () => {
-  const right = getAngleType(361);
+  const right = getAngleType(360);
   assert.equal(right, "Invalid angle");
 });
 
@@ -56,8 +51,30 @@ test("Classifies Invalid angles", () => {
   assert.equal(right, "Invalid angle");
 });
 
+test("Classifies Invalid angles", () => {
+  const right = getAngleType(0);
+  assert.equal(right, "Invalid angle");
+});
 
+test("Classifies Acute angles", () => {
+  const right = getAngleType(1);
+  assert.equal(right, "Acute angle");
+});
 
+test("Classifies Acute angles", () => {
+  const right = getAngleType(89);
+  assert.equal(right, "Acute angle");
+});
+
+test("Classifies Acute angles", () => {
+  const right = getAngleType(45);
+  assert.equal(right, "Acute angle");
+});
+
+test("Classifies Acute angles", () => {
+  const right = getAngleType(0.5);
+  assert.equal(right, "Acute angle");
+});
 
 // - "Acute angle" for angles greater than 0° and less than 90°
 // - "Right angle" for exactly 90°
