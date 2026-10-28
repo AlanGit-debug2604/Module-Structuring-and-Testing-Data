@@ -40,6 +40,20 @@ test("Arbitrary non-card string", () => {
   "Expected clear error"
 );
 });
+
+test("Classifies ace cards", () => {
+  assert.equal(getCardValue("A♠"), 11);
+});
+
+test("Classifies face cards", () => {
+  assert.equal(getCardValue("J♠"), 10);
+  assert.equal(getCardValue("Q♠"), 10);
+  assert.equal(getCardValue("K♠"), 10);
+});
+
+test("Classifies 10 cards", () => {
+  assert.equal(getCardValue("10♠"), 10);
+});
 // TODO: What other invalid card cases can you think of?
 //Invalid Rank or
 //Invalid String
