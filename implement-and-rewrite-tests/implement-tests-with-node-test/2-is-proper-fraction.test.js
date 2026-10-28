@@ -42,3 +42,9 @@ test("Infinity denominator throws TypeError", () => {
 test("Denominator is 0 throws TypeError", () => {
   assert.throws(() => isProperFraction(1, 0), TypeError);
 });
+
+test("should return true for negative proper fraction", () => {
+  assert.equal(isProperFraction(-1, 2), true);
+  assert.equal(isProperFraction(-2, 3), true);
+  assert.equal(isProperFraction(-3, 4), true);
+});
