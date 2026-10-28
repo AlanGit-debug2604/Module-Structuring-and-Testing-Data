@@ -17,8 +17,6 @@
 // execute the code to ensure all tests pass.
 
 export function getAngleType(angle) {
-  
-
   if (angle <= 0 || angle >= 360) {
     return `Invalid angle`;
   }
