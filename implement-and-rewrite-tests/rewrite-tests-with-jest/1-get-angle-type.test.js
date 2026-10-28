@@ -42,4 +42,3 @@ test(`should return "Invalid angle" when (angle <= 0 or angle >= 360)`, () => {
   expect(getAngleType(361)).toEqual("Invalid angle");
   expect(getAngleType(-0.5)).toEqual("Invalid angle");
 });
-
