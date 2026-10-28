@@ -59,7 +59,6 @@ test(`Should throw an error for edge cases`, () => {
   expect(() => getCardValue("10♠♣")).toThrow(Error);
 });
 
-
 // Suggestion: Group the remaining test data into these categories:
 //   Number Cards (2-10)
 //   Face Cards (J, Q, K)
@@ -68,4 +67,3 @@ test(`Should throw an error for edge cases`, () => {
 // To learn how to test whether a function throws an error as expected in Jest,
 // please refer to the Jest documentation:
 // https://jestjs.io/docs/expect#tothrowerror
-
