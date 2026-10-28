@@ -43,32 +43,3 @@ test(`should return "Invalid angle" when (angle <= 0 or angle >= 360)`, () => {
   expect(getAngleType(-0.5)).toEqual("Invalid angle");
 });
 
-//test("Classifies right angles", () => {
-//  const right = getAngleType(90);
-
-//test("Classifies obtuse angles", () => {
-//  const right = getAngleType(91);
-
-//test("Classifies obtuse angles", () => {
-// const right = getAngleType(179);
-
-//test("Classifies Straight angles", () => {
-//  const right = getAngleType(180);
-
-//test("Classifies Reflex angles", () => {
-//  const right = getAngleType(181);
-
-//test("Classifies Reflex angles", () => {
-//  const right = getAngleType(359);
-
-//test("Classifies Reflex angles", () => {
-//  const right = getAngleType(360);
-
-//test("Classifies Invalid angles", () => {
-//  const right = getAngleType(361);
-
-//test("Classifies Invalid angles", () => {
-//  const right = getAngleType(361);
-
-//test("Classifies Invalid angles", () => {
-//  const right = getAngleType(-1);
